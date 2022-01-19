@@ -11,13 +11,12 @@ interface Transaction {
   createdAt: string;
 }
 
-
 export function TransactionTable() {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
 
     useEffect(() => {
       api.get('transactions')
-        .then(response => setTransactions(response.data.transactions))
+        .then((response: any) => setTransactions(response.data.transactions))
     }, []);
     
     return(
@@ -41,8 +40,7 @@ export function TransactionTable() {
                   <td>{transaction.createdAt}</td>
                 </tr>
               ))}
-            </tbody>
-            
+            </tbody>           
           </table>
         </Container>
     );

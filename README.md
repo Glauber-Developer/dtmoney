@@ -10,7 +10,7 @@ $ git clone https://github.com/HulkFront/dtmoney.git
 $ cd dtmoney
 
 # Instale as dependências
-$ yarn
+$ yarn install
 
 # Execute a aplicação
 $ yarn start
